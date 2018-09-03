@@ -1,0 +1,42 @@
+1.下列選向哪些可以編譯成功?(選擇2個)
+   A.char xy='yz';
+   B.String s2="s2";
+   C.char a='\';
+   D.String s="\"";
+   E.int i=1+0.1;
+
+2.請選擇合法的敘述句。(選擇2個)
+  A. String #s1="Hi!";
+  B. int $money=1000;
+  C. double _tax=0.06;
+  D. double ~pi=3.14;
+
+3.程式碼如下:
+	
+	01 int i=1;
+	02 long I=1;
+	03 float f=1.0f;
+	04 double d=1.0;
+	05 sum=i+I+f+d;
+
+請問sum應該定義成什麼資料類型?
+A. byte
+B. short
+C. int
+D. long
+E. float
+F. double
+
+4.下列選向哪些可以編譯成功?(選擇3個)
+  A. int i=(int)(1+1.1f+1.1);
+  B. double d=(float)(1+1.1f+1.1);
+  C. long I=1+1.1f+1.1;
+  D. float f=(long)(1+1.1f+1.1);
+  E. int i=(int)1.1f+1.1;
+
+5.選出合法的識別字(選擇4個 )
+  A. _$i
+  B. $_i
+  C. javac
+  D. 2i
+  E. i2

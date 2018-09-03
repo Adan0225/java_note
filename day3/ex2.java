@@ -7,8 +7,8 @@ class ex2
         //x++;
         //++x;
         //y=x;
-        y = x++; //y=x;x=x+1;
-        //y=++x;//x=x+1;y=x;
+        //y = x++; //y=x;x=x+1;
+        y=++x;//x=x+1;y=x;
         System.out.println("x=" + x);
         System.out.println("y=" + y);
         /*
