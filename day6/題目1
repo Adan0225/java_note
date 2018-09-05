@@ -1,0 +1,105 @@
+1.程式碼如下,請問最後結果如何?
+	01. class Test{
+	02.     public static void main(String args[]){
+	03.        int x=2;
+	04. 	   int y=1;
+	05.        if((x==1)&&(y == 2))
+	06.            System.out.println("x=1,");
+	07.            System.out.println("y=2, ");
+	08.        if((x+y)==3)
+	09.            System.out.println("x+y=3");
+	10.        }
+	11.  }
+  
+  A. x=1 , y=2 , x+y=3
+  B. y=2 , x+y=3 OK
+  C. x=1 , y=2
+  D. x+y=3
+  E. 編譯失敗
+
+2.程式碼如下，請問最後結果為何?
+	01. int x=0;
+	02. int y=0;
+	03. do{
+	04. y++;
+	05. ++x;
+	06. }while(x<5);
+	07. System.out.println(x+","+y);
+
+ A. 5,6
+ B. 5,5 ok
+ C. 6,5
+ D. 6,6
+ E. 編譯失敗
+
+
+3.程式碼如下，請問最後結果為何?
+	01. class Test{
+	02. public static void main(String args[]){
+	03. String str;
+	04. z:                   //只能寫在loop前一行                    
+	05. str="";
+
+	06. for(int x=3;x<8;x++){
+	07.    int(x==4) break;
+	08.    int(x==6) break z;
+	09.    str+=x;
+	10.    }
+	11.    System.out.println(str);
+	12.   }
+	13. }
+
+ A. 3
+ B. 34
+ C. 345
+ D. 3456
+ E. 34567
+ F. 編譯失敗
+
+
+4.程式碼如下，請問最後果為何?
+	01. class Test{
+	02. public static void main(String args[]){
+	03.     int i=2000;
+        04.     int j=1999;
+	05.     int k=1000;
+       	06.     if((i>j)^((k*2)==i))
+	07.        System.out.println(1);
+	08.     if((j+1)!=i^((k*2)==j))
+	09.        System.out.println(2);
+	10.    }
+	11. }
+
+ A. 1
+ B. 2
+ C. 12
+ D. 沒有任何輸出
+ E. 執行失敗
+ F. 編譯失敗
+
+
+5.程式碼如下，請問最後結果為何?
+	01. class Test{
+	02. public static void main(String args[])
+	03.     String str="";
+	04.     z:
+	05.     for(int x=0;x<3;x++){
+	06.         for(int y=0;y<2;y++){
+	07.             if(x==1) break;
+	08.             if(x==2) break z;
+	09.             str=str+x+y;
+	10.          }
+	11.      }
+	12.      System.out.println(str);
+	13.     }
+	14. }
+
+ A. 00
+ B. 0001 ok
+ C. 000110
+ D. 00011011
+ E. 編譯失敗
+
+
+
+	
