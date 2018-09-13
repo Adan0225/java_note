@@ -1,0 +1,34 @@
+//Netbeans note
+
+private void okMouseClicked(java.awt.event.MouseEvent evt) {                                
+        System.out.println("hello hjava");
+        show.setText("hello java");
+    }                   
+
+
+
+ private void okMouseClicked(java.awt.event.MouseEvent evt) {                                
+        /*System.out.println("hello hjava");
+        show.setText("hello java");*/
+        int X=Integer.parseInt(x.getText());
+        int Y=Integer.parseInt(y.getText());
+        show.setText("共:"+(X+Y));
+        show.setText(""+(X+Y)); // ""此代表轉型
+
+    }  
+
+
+
+
+private void okMouseClicked(java.awt.event.MouseEvent evt) {                                
+       String NAME=name.getText();
+       int RULER=Integer.parseInt(ruler.getText());
+       int PEN=Integer.parseInt(pen.getText());
+       Order o=new Order(NAME,RULER,PEN);
+       
+       show.setText("輸出訂單資料為:"+
+               "\n名 :"+o.getName()+
+               "\n尺:"+o.getRuler()+
+               "\n筆:"+o.getPen()+
+               "\n共:"+o.getSum()+" 元");
+    }                                 

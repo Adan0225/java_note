@@ -1,1 +1,4 @@
 *.class
+/day9/javaOrder/nbproject/private/
+/day9/javaOrder/build/
+/day9/javaOrder/dist/

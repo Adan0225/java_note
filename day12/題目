@@ -1,0 +1,86 @@
+.程式碼如下，請問最後結果為何?
+	01. class Excute{
+	02.    public static void main(String args[]){
+	03.    	  int[] a={4,3,2};
+	04.       int i=a.length>0 ? a[0]:null;        
+	05.       System.out.println(i);
+	06.     }
+	07.  }
+
+	A. 4 ok
+	B. 3
+	C. 2
+	D. null
+	E. 編譯失敗
+
+2.程式碼如下，請問最後結果為何?
+	01. import java.util.Arrays;
+	02. class Search{
+	03.    public static void main(String args[]){
+	04.       String a[]={"b","r","g","y","o"};   []中框號前後都沒關係   
+	05.       Arrays.sort(a);
+	06.       int i1=Arrays.binarySearch(a,"o"); //a陣到是否有 o
+	07.       int i2=Arrays.binarySearch(a,"v"); // a陣到是否有 v , 沒有-5
+	08.       System.out.println(i1+""+i2);
+	09.   }
+	10. }
+
+	A.  3-4
+	B.  3-5
+	C.  2-5 ok
+	D.  2-4
+	E.  編譯失敗
+	F.  執行失敗
+
+
+3.程式碼如下，請問最後結果為何?
+	01.  import java.util.Arrays;
+	02.  class Execute{
+	03.    public static void main(String args[]){
+	04.       String[] a[]={{"1","2"},{"3","4","5"}};
+	05.       String[][] b=a;                     
+	06.       System.out.println(b[1][2]);
+	07.    }
+	08. }
+
+
+
+	A. 1
+	B. 2
+	C. 3
+	D. 4
+	E. 5    ok
+	F. 編譯失敗
+	E. 執行失敗
+
+
+4.程式碼如下，請問最後結果為何?
+	01. String[] str=null;
+	02. System.out.println(str.length);   編譯過執行失敗
+
+	A. 0
+	B. null
+	C. 1
+	D. 編譯失敗
+	E. 執行失敗   ok
+
+
+
+5.程式碼如下，請問最後結果為何?
+	01. import java.util.Arrays;
+	02. class Execute{
+	03.    public static void main(String args[]){
+	04.   	 String[] s1={"1","2","3"};
+	05.      String[] s2={"4","5","6"};
+	06.      s1=s2;
+	07.      for(String str:s1)
+	08.       {System.out.println(str);}
+	09.     }
+	10.  }
+
+
+
+	A. 123
+	B. 456 ok
+	C. 編譯失敗
+	D. 執行失敗
