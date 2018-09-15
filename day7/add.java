@@ -4,7 +4,7 @@ class add
     // call by reference
     {
         student s = new student("abc", 88, 66); //（）等於建構數引數
-        student s2 = new student(75, 80);
+        student s2 = new student("def",75, 80);
         //s-->search stack -->heap
         //student s2=new student();
         s.show();

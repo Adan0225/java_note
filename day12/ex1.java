@@ -20,6 +20,6 @@ class ex1
         }
 
         System.out.println(binarySearch(x, 52)); //搜尋
-        System.out.println(binarySearch(x, 66));  //輸出-6 第六個
+        System.out.println(binarySearch(x, 66));  //輸出-5 第五個
     }
 }

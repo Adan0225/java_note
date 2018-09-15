@@ -3,7 +3,7 @@ class addOrder
     public static void main(String args[])
     {
         /*
-        Order[] o = new Order[3]; //類型一樣[]-->個數 ，new []  o0],o[1],o[2]
+        Order[] o = new Order[3]; //類型一樣[]-->個數 ，new []  o[0],o[1],o[2]
 
             o[0] = new Order("abc1", 4, 5);
             o[1] = new Order("abc2", 4, 5);

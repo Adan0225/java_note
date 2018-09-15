@@ -1,0 +1,14 @@
+第5行插入甚麼方法，可以編譯成功?(選擇3個)
+	01. class A{
+	02    protected int getInt(int i){return i;}
+	03.  }
+	04. class B extends A{
+	05.  //插入程式碼
+	06. }
+
+
+	A. public int getInt(int i){return i;}   ok 
+	B. private int getInt(int i){return i;}    權限不一樣     
+	C. private int getInt(long i){return (int)i;} ok long and int 不一致
+	D. protected long getInt(int i){return i;}
+	E. protected int getInt(long i){return (int)i;} ok

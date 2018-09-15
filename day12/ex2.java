@@ -7,7 +7,7 @@ class ex2
         //y[3] = 100;
         System.out.println("y=" + y);
 
-        for (int o : y) {
+        for (int o : x) {
             System.out.println(o);
         }
 
