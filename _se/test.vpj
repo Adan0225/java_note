@@ -1,0 +1,285 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+    Version="10.0"
+    VendorName="SlickEdit"
+    TemplateName="Java - Empty Project"
+    WorkingDir=".">
+    <Config
+        Name="Release"
+        Type="java"
+        AppTypeList="application,applet,custom"
+        DebugCallbackName="jdwp"
+        ObjectDir="classes"
+        AppType="application"
+        Version="8"
+        OutputFile=""
+        CompilerConfigName="Latest Version">
+        <Menu>
+            <Target
+                Name="Compile"
+                MenuCaption="&amp;Compile"
+                Dialog="_java_options_form Compiler"
+                EnableBuildFirst="0"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveCurrent"
+                RunFromDir="%rw">
+                <Exec CmdLine='javac %jbd %cp "%f"'/>
+            </Target>
+            <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                Dialog="_java_options_form Compiler"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec CmdLine="javamake"/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                Dialog="_java_options_form Compiler"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec CmdLine="javarebuild"/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                Dialog="_java_options_form Debugger"
+                BuildFirst="1"
+                Deletable="0"
+                CaptureOutputWith="ProcessBuffer"
+                RunFromDir="%rw">
+                <Exec CmdLine="java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 %cp ."/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="E&amp;xecute"
+                Dialog="_java_options_form Interpreter"
+                BuildFirst="1"
+                Deletable="0"
+                CaptureOutputWith="ProcessBuffer"
+                RunFromDir="%rw">
+                <Exec CmdLine="java %cp"/>
+            </Target>
+            <Target
+                Name="UnitTest"
+                MenuCaption="Unit Test"
+                ShowOnMenu="Never"
+                Dialog=""
+                BuildFirst="1"
+                Deletable="0"
+                CaptureOutputWith="ProcessBuffer"
+                PreMacro="unittest_pre_build"
+                PostMacro="unittest_post_build"
+                RunFromDir="%rw">
+                <Exec CmdLine="java %cp org.junit.runner.JUnitCore"/>
+            </Target>
+            <Target
+                Name="dash"
+                MenuCaption="-">
+                <Exec/>
+            </Target>
+            <Target
+                Name="View Javadoc"
+                MenuCaption="&amp;View Javadoc"
+                ShowOnMenu="HideIfNoCmdLine"
+                Dialog="_java_options_form javadoc"
+                Deletable="0"
+                SaveOption="SaveCurrent"
+                RunFromDir="%rw">
+                <Exec
+                    CmdLine="javaviewdoc"
+                    Type="Slick-C"/>
+            </Target>
+            <Target
+                Name="Javadoc All"
+                MenuCaption="Javadoc All"
+                ShowOnMenu="HideIfNoCmdLine"
+                Dialog="_java_options_form javadoc"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec CmdLine="javamakedoc javadoc -d docs %cp %{*.java}"/>
+            </Target>
+            <Target
+                Name="dash2"
+                MenuCaption="-">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Make Jar"
+                MenuCaption="Make &amp;Jar"
+                ShowOnMenu="HideIfNoCmdLine"
+                Dialog="_java_options_form jar"
+                CaptureOutputWith="ProcessBuffer"
+                BuildFirst="1"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec CmdLine='javamakejar jar cvf ".jar" %{*}'/>
+            </Target>
+            <Target
+                Name="Java Options"
+                MenuCaption="Java &amp;Options"
+                ShowOnMenu="HideIfNoCmdLine"
+                Deletable="0">
+                <Exec
+                    CmdLine="javaoptions"
+                    Type="Slick-C"/>
+            </Target>
+        </Menu>
+        <AppTypeTargets Name="Debug">
+            <AppTypeTarget
+                MenuCaption="&amp;Debug"
+                Dialog="_java_options_form Appletviewer"
+                BuildFirst="1"
+                Deletable="0"
+                AppType="applet"
+                RunFromDir="%rw">
+                <Exec CmdLine="appletviewer -J-Xdebug -J-Xnoagent -J-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 %h"/>
+            </AppTypeTarget>
+            <AppTypeTarget
+                MenuCaption="&amp;Debug"
+                BuildFirst="1"
+                Deletable="0"
+                AppType="custom"
+                RunFromDir="%rw">
+                <Exec CmdLine="jdb %cp %&lt;e"/>
+            </AppTypeTarget>
+        </AppTypeTargets>
+        <AppTypeTargets Name="Execute">
+            <AppTypeTarget
+                MenuCaption="E&amp;xecute"
+                Dialog="_java_options_form Appletviewer"
+                BuildFirst="1"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                AppletClass=""
+                Deletable="0"
+                AppType="applet"
+                RunFromDir="%rw">
+                <Exec CmdLine="appletviewer %h"/>
+            </AppTypeTarget>
+            <AppTypeTarget
+                MenuCaption="E&amp;xecute"
+                BuildFirst="1"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                Deletable="0"
+                AppType="custom"
+                RunFromDir="%rw">
+                <Exec CmdLine="java %cp %&lt;e"/>
+            </AppTypeTarget>
+        </AppTypeTargets>
+    </Config>
+    <CustomFolders>
+        <Folder
+            Name="Source Files"
+            Filters="*.java;*.c;*.cpp;*.cxx;*.hxx;*.prg;*.pas;*.dpr;*.asm;*.bas;*.sc;*.e"/>
+        <Folder
+            Name="Bitmaps"
+            Filters="*.jpg;*.gif;*.bmp"/>
+        <Folder
+            Name="Other Files"
+            Filters=""/>
+    </CustomFolders>
+    <Files AutoFolders="DirectoryView">
+        <Folder Name="../day11">
+            <F N="../day11/add1.java"/>
+            <F N="../day11/add2.java"/>
+            <F N="../day11/addFV.java"/>
+            <F N="../day11/CAL.java"/>
+            <F N="../day11/ex1.java"/>
+            <F N="../day11/FV.java"/>
+        </Folder>
+        <Folder Name="../day12">
+            <F N="../day12/add.java"/>
+            <F N="../day12/addOrder.java"/>
+            <F N="../day12/ex1.java"/>
+            <F N="../day12/ex2.java"/>
+            <F N="../day12/ex3.java"/>
+            <F N="../day12/ex4.java"/>
+            <F N="../day12/Order.java"/>
+            <F N="../day12/student.java"/>
+            <F N="../day12/test.java"/>
+        </Folder>
+        <Folder Name="../day13">
+            <F N="../day13/A.java"/>
+            <F N="../day13/A_1.java"/>
+            <F N="../day13/add.java"/>
+            <F N="../day13/add2.java"/>
+            <F N="../day13/B.java"/>
+            <F N="../day13/SA.java"/>
+            <F N="../day13/SB.java"/>
+            <F N="../day13/school.java"/>
+            <F N="../day13/student.java"/>
+        </Folder>
+        <Folder Name="../day2">
+            <F N="../day2/ex1.java"/>
+            <F N="../day2/ex2.java"/>
+        </Folder>
+        <Folder Name="../day3">
+            <F N="../day3/ex1.java"/>
+            <F N="../day3/ex2.java"/>
+            <F N="../day3/ex3.java"/>
+            <F N="../day3/ex4.java"/>
+            <F N="../day3/ex5.java"/>
+            <F N="../day3/s1.java"/>
+            <F N="../day3/s2.java"/>
+        </Folder>
+        <Folder Name="../day4">
+            <F N="../day4/ex1.java"/>
+            <F N="../day4/ex2.java"/>
+            <F N="../day4/ex21.java"/>
+            <F N="../day4/ex3.java"/>
+        </Folder>
+        <Folder Name="../day5">
+            <F N="../day5/ex1.java"/>
+            <F N="../day5/ex11.java"/>
+            <F N="../day5/ex2.java"/>
+            <F N="../day5/ex21.java"/>
+            <F N="../day5/ex3.java"/>
+            <F N="../day5/ex31.java"/>
+        </Folder>
+        <Folder Name="../day6">
+            <F N="../day6/A.java"/>
+            <F N="../day6/addmember.java"/>
+            <F N="../day6/B.java"/>
+            <F N="../day6/ex1-3.java"/>
+            <F N="../day6/ex1.java"/>
+            <F N="../day6/ex13.java"/>
+            <F N="../day6/ex2.java"/>
+            <F N="../day6/member.java"/>
+        </Folder>
+        <Folder Name="../day7">
+            <F N="../day7/add.java"/>
+            <F N="../day7/student.java"/>
+        </Folder>
+        <Folder Name="../day8">
+            <F N="../day8/add.java"/>
+            <F N="../day8/addOrder.java"/>
+            <F N="../day8/Order.java"/>
+            <F N="../day8/School.java"/>
+            <F N="../day8/school.java"/>
+            <F N="../day8/show.java"/>
+        </Folder>
+        <Folder Name="../day9">
+            <Folder Name="javaOrder">
+                <Folder Name="src">
+                    <F N="../day9/javaOrder/src/Order.java"/>
+                    <F N="../day9/javaOrder/src/OrderUI.java"/>
+                </Folder>
+            </Folder>
+            <F N="../day9/add.java"/>
+            <F N="../day9/add2.java"/>
+            <F N="../day9/Order.java"/>
+            <F N="../day9/school.java"/>
+        </Folder>
+    </Files>
+</Project>

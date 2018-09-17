@@ -1,10 +1,8 @@
 class A  extends student  //繼承
 {
-
     int word;
     A(String name, int chi, int word)
     {
-
         super(name, chi); //只要寫super就是指父類別 ()內變數
         this.word = word;
         System.out.println("A班學生, word:" + word);
@@ -16,7 +14,6 @@ class A  extends student  //繼承
         System.out.println("A班學生, word:" + word);
     }
     /*
-
     A(String name, int chi, int word)
     {
         this.name = name;

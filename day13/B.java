@@ -1,10 +1,8 @@
 class B extends student
 {
-
     int excel;
     B(String name, int chi, int excel)
     {
-
         super(name, chi); //只要寫super就是指父類別 ()內變數
         this.excel = excel;
         System.out.println("B班學生, excel:" + excel);
@@ -16,7 +14,6 @@ class B extends student
         System.out.println("B班學生, excel:" + excel);
     }
     /*
-
     A(String name, int chi, int word)
     {
         this.name = name;
@@ -25,7 +22,6 @@ class B extends student
         sum = chi + eng;
     }
     */
-
     void show()
     {
         System.out.println("姓名:" + name + "\t國文:" + chi + "\tEXCEL：" + excel);

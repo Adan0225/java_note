@@ -13,7 +13,5 @@ class add2
         s2.change(87);
         System.out.println(s1.show());
         System.out.println(s2.show());
-
-
     }
 }
